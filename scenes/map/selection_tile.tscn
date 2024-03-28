@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj51bdrcgvvbt"]
+
+[ext_resource type="Script" path="res://scripts/map/selection_tile.gd" id="1_7yrq4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2vi2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.937255, 0.937255, 0.937255, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(100, 100)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_m2vi2")
+script = ExtResource("1_7yrq4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TileTexture" type="TextureButton" parent="MarginContainer"]
+layout_mode = 2
+stretch_mode = 0
